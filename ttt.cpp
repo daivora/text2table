@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
   int wordnum = 0;
   int ch;
   while ((ch = inFile.get()) != EOF) {
-    if (ch == ' '  ch == '\t') {
+    if (ch == ' ' || ch == '\t') {
       if (wordlen != 0) {
         if (lenwords[wordnum] < wordlen) {
           lenwords[wordnum] = wordlen;
@@ -60,7 +60,7 @@ int main(int argc, char* argv[]) {
   wordnum = 0;
   int char_counter = 0;
   while ((ch = inFile.get()) != EOF) {
-    if (ch == ' '  ch == '\t') {
+    if (ch == ' ' || ch == '\t') {
       if (wordlen != 0) {
         ++wordnum;
         wordlen = 0;
