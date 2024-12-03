@@ -3,7 +3,7 @@
 int main(int argc, char* argv[]) {
 	if (argc != 3) {
 		std::cout << "Use:\n"
-			<< "	text2table sourse destination\n";
+			  << "	text2table sourse destination\n";
 		return 1;
 	}
 
@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
 		std::cout << "Can not open file '" << argv[1] << "'\n";
 		return 2;
 	}
-	//1. Ïðîéòè ïî ôàéëó è ïîäñ÷èòàòü øèðèíû ñòîëáöîâ.
+	//1. ÃÃ°Ã®Ã©Ã²Ã¨ Ã¯Ã® Ã´Ã Ã©Ã«Ã³ Ã¨ Ã¯Ã®Ã¤Ã±Ã·Ã¨Ã²Ã Ã²Ã¼ Ã¸Ã¨Ã°Ã¨Ã­Ã» Ã±Ã²Ã®Ã«Ã¡Ã¶Ã®Ã¢.
 	int lenwords[200] = { 0 };
 	int wordlen = 0;
 	int wordnum = 0;
