@@ -1,0 +1,18 @@
+@echo off
+
+set /A errors=0
+set /A counter=0
+
+for %%f in (tests\in\*.*) do (
+  rem echo %%~nxf
+  x64\Debug\TextToTable.exe %%f output.txt
+  cmp output.txt tests\out\%%~nxf || (echo in %%~nxf && set /A errors+=1)
+  rem if ERRORLEVEL 1 set /A errors+=1
+  set /A counter+=1
+)
+
+if %errors%==0 (
+  echo %counter%/%counter% tests passed OK
+) else (
+  echo %errors% errors in %counter% tests
+)
