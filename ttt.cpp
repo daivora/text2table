@@ -12,10 +12,6 @@ int main(int argc, char* argv[]) {
     std::cout << "Can not open file '" << argv[1] << "'\n";
     return 2;
   }
-<<<<<<< HEAD
-  // 1. Пройти по файлу и посчитать ширины столбцов;
-=======
->>>>>>> 841075f (fix: narrowing conversions)
   int lenwords[200] = { 0 };
   int wordlen = 0;
   int wordnum = 0;
@@ -49,15 +45,8 @@ int main(int argc, char* argv[]) {
   for (int i = 0; i < 200; ++i) {
     std::cout << lenwords[i] << " ";
   }
-<<<<<<< HEAD
-  // 2. Пройти по файлу и добавоять пробелы к словам так, 
-  //    чтобы ширина слова с пробелами стала равна ширине столбца.
-  inFile.clear();
-  inFile.seekg(0); // вернуться в начало для чтения файла
-=======
   inFile.clear();
   inFile.seekg(0); 
->>>>>>> 841075f (fix: narrowing conversions)
   std::ofstream outFile(argv[2]);
   if (!outFile.is_open()) {
     std::cout << "Can not write to file '" << argv[2] << "'\n";
@@ -81,11 +70,8 @@ int main(int argc, char* argv[]) {
       char_counter = 0;
     }
     else {
-<<<<<<< HEAD
-      if (wordlen == 0 && wordnum > 0) { // Вставить пробелы перед словом
-=======
+      if (wordlen == 0 && wordnum > 0) { 
       if (wordlen == 0 && wordnum > 0) {
->>>>>>> 841075f (fix: narrowing conversions)
         while (char_counter <= lenwords[wordnum-1]) {
           outFile.put(' ');
           ++char_counter;
