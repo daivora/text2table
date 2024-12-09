@@ -69,8 +69,7 @@ int main(int argc, char* argv[]) {
       wordlen = 0;
       char_counter = 0;
     }
-    else {
-      if (wordlen == 0 && wordnum > 0) { 
+    else { 
       if (wordlen == 0 && wordnum > 0) {
         while (char_counter <= lenwords[wordnum-1]) {
           outFile.put(' ');
